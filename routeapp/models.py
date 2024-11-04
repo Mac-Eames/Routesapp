@@ -19,7 +19,6 @@ class Routes(models.Model):
     name = models.CharField(max_length=100)
     geometry = geomodels.LineStringField()
     highway = models.CharField(max_length=100, default='unknown')
-    # path = models.CharField(max_length=255, blank=True, null=True)  # If you need this field
 
      
     def __str__(self):
