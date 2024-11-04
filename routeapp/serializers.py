@@ -4,5 +4,5 @@ from .models import Routes
 class RouteSerializer(GeoFeatureModelSerializer):
     class Meta:
         model = Routes
-        geo_field = 'path'
-        fields = ('id', 'name')
+        geo_field = 'geometry'
+        fields = ('name', 'highway')

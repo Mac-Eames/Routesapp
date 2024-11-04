@@ -60,8 +60,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Route.wsgi.application'
-GDAL_LIBRARY_PATH = '.venv\Lib\site-packages\osgeo\gdal.dll'
-
+# GDAL_LIBRARY_PATH = '.venv\Lib\site-packages\osgeo\gdal.dll'
+GDAL_LIBRARY_PATH = 'C:\\OSGeo4W\\bin\\gdal309.dll'
 
 
 load_dotenv()
@@ -70,7 +70,7 @@ load_dotenv()
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': os.getenv('DB_NAME'),
         'USER': os.getenv('DB_USER'),
         'PASSWORD': os.getenv('DB_PASSWORD'),
@@ -122,4 +122,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GEOS_LIBRARY_PATH =  ".venv\Lib\site-packages\osgeo\geos_c.dll"
+# GEOS_LIBRARY_PATH =  ".venv\Lib\site-packages\osgeo\geos_c.dll"
